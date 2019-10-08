@@ -19,5 +19,7 @@ namespace ContosoUniversity.Data
 
             base.OnModelCreating(builder);
         }
+
+        public DbSet<ContosoUniversity.Entities.Student> Student { get; set; }
     }
 }
