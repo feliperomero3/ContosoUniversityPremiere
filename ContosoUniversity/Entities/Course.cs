@@ -4,9 +4,9 @@ namespace ContosoUniversity.Entities
 {
     public class Course
     {
-        public Course(ICollection<Enrollment> enrollments)
+        public Course()
         {
-            Enrollments = enrollments;
+            Enrollments = new List<Enrollment>();
         }
 
         public int CourseId { get; set; }
