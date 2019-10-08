@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <UserSecretsId>aspnet-ContosoUniversity-D9C7CB3D-B570-4280-859F-F63450952D56</UserSecretsId>
+    <UserSecretsId>ContosoUniversity</UserSecretsId>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
