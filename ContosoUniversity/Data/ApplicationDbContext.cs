@@ -11,6 +11,10 @@ namespace ContosoUniversity.Data
         {
         }
 
+        public DbSet<Student> Student { get; set; }
+        public DbSet<Enrollment> Enrollment { get; set; }
+        public DbSet<Course> Course { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Course>()
@@ -19,7 +23,5 @@ namespace ContosoUniversity.Data
 
             base.OnModelCreating(builder);
         }
-
-        public DbSet<ContosoUniversity.Entities.Student> Student { get; set; }
     }
 }
