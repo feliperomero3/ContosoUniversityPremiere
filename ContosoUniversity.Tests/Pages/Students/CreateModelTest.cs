@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;
 
-namespace ContosoUniversity.Tests.Pages
+namespace ContosoUniversity.Tests.Pages.Students
 {
     public class CreateModelTest
     {
