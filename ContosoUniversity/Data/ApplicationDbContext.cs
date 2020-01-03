@@ -17,11 +17,11 @@ namespace ContosoUniversity.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
+
             builder.Entity<Course>()
                 .Property(c => c.CourseId)
                 .ValueGeneratedNever();
-
-            base.OnModelCreating(builder);
         }
     }
 }
