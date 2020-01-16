@@ -1,34 +1,25 @@
 ﻿using System.Threading.Tasks;
+using ContosoUniversity.Data;
 using ContosoUniversity.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity.Pages.Students
 {
     public class DetailsModel : PageModel
     {
-        private readonly ContosoUniversity.Data.ApplicationDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public DetailsModel(ContosoUniversity.Data.ApplicationDbContext context)
+        public DetailsModel(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
 
         public Student Student { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public async Task<IActionResult> OnGetAsync(int id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Student = await _context.Student
-                .Include(s => s.Enrollments)
-                .ThenInclude(e => e.Course)
-                .AsNoTracking()
-                .FirstOrDefaultAsync(m => m.Id == id);
+            Student = await _unitOfWork.Student.GetStudentDetailAsync(id);
 
             if (Student == null)
             {

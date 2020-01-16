@@ -8,5 +8,6 @@ namespace ContosoUniversity.Data
         Task<Student> GetStudentAsync(int id);
         void Add(Student student);
         void Remove(Student student);
+        Task<Student> GetStudentDetailAsync(int id);
     }
 }
