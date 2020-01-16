@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using ContosoUniversity.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace ContosoUniversity.Data
 {
@@ -8,7 +9,7 @@ namespace ContosoUniversity.Data
     {
         public static void Initialize(ApplicationDbContext context)
         {
-            context.Database.EnsureCreated();
+            context.Database.Migrate();
 
             // Look for any students.
             if (context.Student.Any())
