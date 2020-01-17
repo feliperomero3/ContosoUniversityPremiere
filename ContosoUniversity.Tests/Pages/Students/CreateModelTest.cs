@@ -1,5 +1,4 @@
-﻿using System;
-using ContosoUniversity.Data;
+﻿using ContosoUniversity.Data;
 using ContosoUniversity.Entities;
 using ContosoUniversity.Pages.Students;
 using Microsoft.AspNetCore.Mvc;
@@ -20,15 +19,7 @@ namespace ContosoUniversity.Tests.Pages.Students
 
             mockUnitOfWork.SetupGet(u => u.Student).Returns(mockRepository.Object);
 
-            var createModel = new CreateModel(mockUnitOfWork.Object)
-            {
-                Student = new Student
-                {
-                    FirstMidName = "Carson",
-                    LastName = "Alexander",
-                    EnrollmentDate = DateTime.Parse("2005-09-01")
-                }
-            };
+            var createModel = new CreateModel(mockUnitOfWork.Object);
 
             // Act
             var result = await createModel.OnPostAsync();
