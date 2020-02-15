@@ -1,4 +1,4 @@
-# Contoso University
+# Contoso University Sample Application
 
 This web app is loosely based on Contoso University built in [Razor Pages with Entity Framework Core in ASP.NET Core - Tutorial 1 of 8](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-2.2&tabs=visual-studio) By Tom Dykstra and Rick Anderson.
 
