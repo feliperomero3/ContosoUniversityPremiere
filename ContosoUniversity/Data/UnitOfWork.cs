@@ -6,10 +6,10 @@ namespace ContosoUniversity.Data
     {
         private readonly ApplicationDbContext _context;
 
-        public UnitOfWork(ApplicationDbContext context)
+        public UnitOfWork(ApplicationDbContext context, IStudentRepository studentRepository)
         {
             _context = context;
-            Student = new StudentRepository(context);
+            Student = studentRepository;
         }
 
         public IStudentRepository Student { get; }
