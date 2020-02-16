@@ -90,6 +90,7 @@ namespace ContosoUniversity.Data
                 new Enrollment { StudentId = 5, CourseId = 4041, Grade = Grade.C },
                 new Enrollment { StudentId = 6, CourseId = 1045 },
                 new Enrollment { StudentId = 7, CourseId = 3141, Grade = Grade.A },
+                new Enrollment { StudentId = 8, CourseId = 4041, Grade = Grade.A }
             };
             foreach (Enrollment e in enrollments)
             {
