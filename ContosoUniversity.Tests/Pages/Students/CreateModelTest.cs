@@ -10,7 +10,7 @@ namespace ContosoUniversity.Tests.Pages.Students
     public class CreateModelTest
     {
         [Fact]
-        public async void OnPostAsync_Creates_a_Student()
+        public async void Creates_a_Student()
         {
             // Arrange
             var mockRepository = new Mock<IStudentRepository>();

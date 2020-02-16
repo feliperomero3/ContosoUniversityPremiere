@@ -11,7 +11,7 @@ namespace ContosoUniversity.Tests.Pages.Students
     public class DetailsModelTest
     {
         [Fact]
-        public async void Gets_a_Student_Details()
+        public async void Gets_a_Student_Detail()
         {
             // Arrange
             var mockRepository = new Mock<IStudentRepository>();
