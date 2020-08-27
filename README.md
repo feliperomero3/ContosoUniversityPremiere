@@ -26,7 +26,7 @@ If you installed Visual Studio 2019 with Web development workload you'll have ev
 
 ## Notes
 
-We have added a few architecture 'enhacements'
+We have added a few architecture 'enhancements'
 
 - IoW and Repository pattern
 - ViewModels to separate UI and DAL
